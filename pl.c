@@ -2,7 +2,7 @@
 #include<stdlib.h>
 int main()
 {
-    float cp,sp,amt; //declaring variables
+    float cp,sp,amt,per; //declaring variables
          // taking input from user
 
     printf("It is  a profit and loss calculation program\n");
@@ -13,14 +13,18 @@ int main()
    //condional statement
     if(cp<sp){
         amt =sp-cp;
+        per = amt/cp*100;
         printf("You are in profit\n");
-        printf("You earned %.0f more",amt);
+        printf("You earned %.2f more\n",amt);
+        printf("profit percentage : %.2f",per);
         
     }
     else{
         amt= cp - sp;
+        per = amt/cp *100;
         printf("You are in loss\n");
-        printf("You have lost %.0f",amt);
+        printf("You have lost %.2f.\n",amt);
+        printf("loss percentage : %.2f",per);
     }
 
     return 0;
